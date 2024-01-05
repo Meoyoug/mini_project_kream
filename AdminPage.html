@@ -49,6 +49,9 @@
               <div class="col-auto">
                 <button type="button" id="search-btn" class="btn btn-primary">조회</button>
               </div>
+              <div class="delete_bt">
+                <button type="button" id="search-btn" class="btn btn-danger">선택된 카테고리 삭제</button>
+              </div>
           </form>
           <div class="container mt-3">
         <table class="table table-sm">
@@ -97,7 +100,7 @@
       
       data.forEach((item) => {
           const row = dataTable.insertRow();
-          row.insertCell(0).innerHTML = item.category;
+          row.insertCell(0).innerHTML = `<input type = "checkbox" class = "category_checkbox"> ${item.category}`;
           row.insertCell(1).innerHTML = item.brand;
           row.insertCell(2).innerHTML = item.product;
           row.insertCell(3).innerHTML = item.price;
