@@ -56,6 +56,7 @@
           <div class="container mt-3">
         <table class="table table-sm">
             <thead>
+                <th scope="col">선택</th>
                 <th scope="col">카테고리</th>
                 <th scope="col">브랜드</th>
                 <th scope="col">상품명</th>
@@ -100,11 +101,12 @@
       
       data.forEach((item) => {
           const row = dataTable.insertRow();
-          row.insertCell(0).innerHTML = `<input type = "checkbox" class = "category_checkbox"> ${item.category}`;
-          row.insertCell(1).innerHTML = item.brand;
-          row.insertCell(2).innerHTML = item.product;
-          row.insertCell(3).innerHTML = item.price;
-          row.insertCell(4).innerHTML = item.gender;
+          row.insertCell(0).innerHTML = `&nbsp&nbsp<input type = "checkbox" class = "category_checkbox">`;
+          row.insertCell(1).innerHTML = item.category;
+          row.insertCell(2).innerHTML = item.brand;
+          row.insertCell(3).innerHTML = item.product;
+          row.insertCell(4).innerHTML = item.price;
+          row.insertCell(5).innerHTML = item.gender;
       });
       //정시마다 업데이트 되도록 설정
       function updateDate(){
