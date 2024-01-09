@@ -1,5 +1,6 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup
+import re
 import time
 import json
 header_user = {
@@ -12,7 +13,7 @@ driver = webdriver.Chrome()
 driver.get(url)
 for i in range(5) : 
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    time.sleep(2)
+    time.sleep(1)
 
 html = driver.page_source
 soup = BeautifulSoup(html, "html.parser")
@@ -31,12 +32,12 @@ data = {
     "items" : []
 }
 for i in total_area :
-    current_price = i.select_one(".amount")
+    price = i.select_one(".price.price_area p")
     brand = i.select_one(".product_info_brand.brand")
     name = i.select_one(".translated_name")
     #category = i.select_one(".style-code")
     #크롤링한 데이터를 json 데이터에 추가.
-    addItem = {"category": "", "brand": f"{brand.text}", "product": f"{name.text}", "price": f"{current_price.text}", "gender": ""}
+    addItem = {"category": "", "brand": f"{brand.text}", "product": f"{name.text}", "price": f"{price}", "gender": ""}
     data['items'].append(addItem)
     # print(f"[{index}]")
     # print(f"브랜드 : {brand.text}")
