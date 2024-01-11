@@ -49,12 +49,15 @@ for i in items :
     product_name = i.find_element(By.CSS_SELECTOR, ".name")
     brand = i.find_element(By.CSS_SELECTOR, ".brand-text")
     price = i.find_element(By.CSS_SELECTOR, ".amount.lg > .num")
-
+    if ('Women' in product_name.text) or ('(W)' in product_name.text):
+        gender = 'female'
+    else :
+        gender = 'unisex'
     #크롤링한 데이터를 json 데이터에 추가.
     if ']' in product_name.text :
-        addItem = {"category": "", "brand": f"{brand.text}", "product": f"{product_name.text.split(']')[1]}", "price": f"{price.text}", "gender": ""}
+        addItem = {"category": "", "brand": f"{brand.text}", "product": f"{product_name.text.split(']')[1]}", "price": f"{price.text}", "gender": f"{gender}"}
     else : 
-        addItem = {"category": "", "brand": f"{brand.text}", "product": f"{product_name.text}", "price": f"{price.text}", "gender": ""}
+        addItem = {"category": "", "brand": f"{brand.text}", "product": f"{product_name.text}", "price": f"{price.text}", "gender": f"{gender}"}
     data['items'].append(addItem)
 
 # 크롤링한 데이터를 파일화
