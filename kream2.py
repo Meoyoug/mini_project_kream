@@ -1,4 +1,4 @@
-from selenium import webdriver
+from selenium import webdriver # 셀레니움이라는 라이브러리에서 웹드라이버 모듈을 찾아서 링크(참조)하는 것
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
