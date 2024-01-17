@@ -7,3 +7,17 @@
 ## 2024.01.09 update
 - kream.py 를 이용해 크림 홈페이지에서 신상품을 크롤링한 데이터를 json형식으로 인코딩 후  crawled_data.json 파일로 저장
 - js 에서 crawled_data.json 파일을 불러와서 디코딩 후에 data 배열에 담을 수 있도록 함
+
+## 2024.01.17 update
+- selenium을 이용하여 크롤링한 데이터를 pymysql을 이용해 MySQL db에 담을 수 있도록 만든 kream3.py 추가
+- kream3.py에서 수정하여 pymysql을 제외시키고 pymongo를 이용하여 MongoDB에 데이터베이스를 만들도록 한 kream4.py 추가
+
+## 추가해야할 부분
+- 검색 기능
+- 각 버튼에대한 기능
+- 카테고리 데이터를 크롤링할 방법
+- 같은 상품이 이미 DB에 등록되어있다면 추가하지않는 방법
+- 매 시간마다 자동크롤링
+- 페이지네이션 기능
+
+
