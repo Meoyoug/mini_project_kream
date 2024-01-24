@@ -3,13 +3,65 @@
 <head>
     <title>Admin Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+    </style>
   </head>
 <body>
-    <header style="text-align: center;" class="align-items-center">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">CrawlData</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/info">infomation</a>
+            </li>
+          </ul> 
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Category
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/search?category=상의&keyword">상의</a></li>
+                <li><a class="dropdown-item" href="/search?category=아우터&keyword">아우터</a></li>
+                <li><a class="dropdown-item" href="/search?category=하의&keyword">하의</a></li>
+                <li><a class="dropdown-item" href="/search?category=신발&keyword">신발</a></li>
+                <li><a class="dropdown-item" href="/search?category=가방&keyword">가방</a></li>
+                <li><a class="dropdown-item" href="/search?category=패션잡화&keyword">패션잡화</a></li>
+                <li><a class="dropdown-item" href="/search?category=컬렉터블&keyword">컬렉터블</a></li>
+                <li><a class="dropdown-item" href="/search?category=테크&keyword">테크</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Gender
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/search?gender=남성&keyword=">남성</a></li>
+                <li><a class="dropdown-item" href="/search?gender=여성&keyword=">여성</a></li>
+                <li><a class="dropdown-item" href="/search?gender=남여공용&keyword=">남여공용</a></li>
+                <li><a class="dropdown-item" href="/search?gender=키즈&keyword=">키즈</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search" id="navvar_search" >
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="display: none;">
+            <button class="btn btn-primary" type="submit" style="display: none;">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="Pagelogo" style="text-align: center; align-items: center; margin-top: 60px;">
       <a href="https://kream.co.kr" class="img-link" >
         <img src="{{ url_for('static', filename='images/logo.jpeg') }}" width="430" height="100">
       </a>
-    </header>
+    </div>
     <div class="container mt-3" style="margin-left: 10;margin-right: 10;">
         <h3 class="mt-5 mb-3" id="db-header">신규 등록 상품 ({{update_date}})</h3>
         <div class = "row row-cols-lg-auto g-3 align-items-center">
@@ -54,7 +106,7 @@
             <button id="update-btn" class="btn btn-success mt-3" onclick="update_product()">상품목록 업데이트</button>
           </div>
         </div>
-      <div class="container mt-3">
+      <div class="container mt-3 table-responsive-md">
         <table class="table">
             <thead>
                 <th scope="col">선택</th>
