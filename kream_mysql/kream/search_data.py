@@ -94,14 +94,14 @@ def search():
             start = offset
             end = offset + per_page
             current_datas = search_result[start:end]
-            return render_template('search.html', results = current_datas, update_date=update_date, pagination=pagination)
+            return render_template('index.html', datas = current_datas, update_date=update_date, pagination=pagination)
         
         # 검색결과가 없으면 비어있는 리스트를 보여줌
         else:
             page, per_page, offset = get_page_args()
             pagination = Pagination(page=page, per_page=per_page, total=0, css_framework='bootstrap5')
             current_datas = []
-            return render_template('search.html', results=current_datas, update_date=update_date, pagination=pagination)
+            return render_template('index.html', datas = current_datas, update_date=update_date, pagination=pagination)
 
     # 입력된 값이 없으면 전체데이터를 보여줌
     else:
@@ -115,7 +115,7 @@ def search():
         start = offset
         end = offset + per_page
         current_datas = search_result[start:end]
-        return render_template('search.html', results = current_datas, update_date=update_date, pagination=pagination)
+        return render_template('index.html', datas = current_datas, update_date=update_date, pagination=pagination)
 
 
     
