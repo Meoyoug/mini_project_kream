@@ -1,4 +1,4 @@
-from kream import create_app
+from kream.app import create_app
 
 app = create_app()
 

@@ -3,10 +3,7 @@
 ## Introduce
 This project was developed during the Oz-bootcamp program. As a mini project, I created an app for crawling a trading platform called KREAM.
 
-This code is set to run only locally.
-
-## Initial Setup
-Since you've set up the folder in a virtual environment, no separate library installation is required. However, you need Python 3 or the Python extension for Visual Studio Code.
+It runs only in the local environment because server deployment has not been performed.
 
 ## Tech Stack
 ### Language
@@ -27,8 +24,16 @@ Since you've set up the folder in a virtual environment, no separate library ins
 ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)
 
 ## How to Run
+1. Download .zip file
+2. install library
+    ```terminal
+    pip install requirements.txt
+    ```
+3. If MySQL is not installed, you need to install MySQL.
+4. Once MySQL is installed, create a database in MySQL Workbench and execute the `kream_schema.sql` file.
+5. setup is complete, you can run the `run.py` at the top level of the folder.
+6. Access the local host on port 5000 using a web browser.
 
-setup is complete, you can run the `run.py` at the top level of the folder.
 
 ## UPDATE History
 
