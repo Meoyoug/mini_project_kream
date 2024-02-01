@@ -10,30 +10,21 @@ Since you've set up the folder in a virtual environment, no separate library ins
 
 ## Tech Stack
 ### Language
-- Python 3
-![python](https://velog.velcdn.com/images/2jinu/post/07861ade-e908-4b25-8490-fbff04995255/image.png)
-- JavaScript
-![JS](https://images.velog.io/images/hongsoom/post/5bbe1f26-1abd-410e-952a-67c06533bb13/JS.jpg)
-- HTML
-![html](https://images.velog.io/images/hosickk/post/3a467b69-7dee-43e5-9fcb-6eef9ee70694/html_thumbnail.jpeg)
-- CSS
-![CSS](https://images.velog.io/images/sky/post/42ccd9f6-fe4a-4dce-bcf2-87eebbf81c1e/css3.png)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 ### Back-end
-- MySQL Database
-![MySQL](https://velog.velcdn.com/images/vive0508/post/2bdc7422-3f97-46dc-9224-8f945861d572/image.jpeg)
-- Flask
-![Flask](https://images.velog.io/images/suhyun-guri/post/d57b1efe-05b6-4350-b0fb-e53be65a4fb3/016.png)
-- Jinja2 Template Engine
-![Jinja2](https://static.imasters.com.br/wp-content/uploads/2019/04/23113406/Conhecendo-o-Jinja2-um-mecanismo-para-templates-no-Flask.jpg)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)
 
 ### Front-end
-- Bootstrap v5.3.1
-![BootStrap](https://tms-outsource.com/blog/wp-content/uploads/2023/05/bootstrap-alternatives.jpg)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 ### Crawling
-- Selenium
-![Selenium](https://images.velog.io/images/poiuyy0420/post/c5ff7130-4280-41d1-8425-8df14dea9f8c/se.jpg)
+![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)
 
 ## How to Run
 

@@ -1,5 +1,4 @@
 from flask import Flask , redirect, url_for, Blueprint, jsonify
-from datetime import datetime
 import subprocess
 update_bp = Blueprint('update', __name__)
 
